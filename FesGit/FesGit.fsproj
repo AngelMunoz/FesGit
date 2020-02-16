@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="RepositoryDetails.fs" />
+        <Compile Include="Dialogs.fs" />
+        <Compile Include="Repositories.fs" />
+        <Compile Include="About.fs" />
+        <Compile Include="Shell.fs" />
+        <Compile Include="Program.fs" />
+        <AvaloniaResource Include="**\*.xaml" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <PackageReference Include="Avalonia.Desktop" Version="0.9.3" />
+        <PackageReference Include="JaggerJo.Avalonia.FuncUI" Version="0.3.0" />
+        <PackageReference Include="JaggerJo.Avalonia.FuncUI.DSL" Version="0.3.0" />
+        <PackageReference Include="JaggerJo.Avalonia.FuncUI.Elmish" Version="0.2.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\FesGit.Core\FesGit.Core.fsproj" />
+    </ItemGroup>
+</Project>
