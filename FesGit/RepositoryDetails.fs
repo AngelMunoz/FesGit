@@ -111,7 +111,8 @@ module RepositoryDetails =
         let itemTemplate (change: StatusEntry) dispatch =
             match change.State with
             | FileStatus.NewInWorkdir -> addedChangeItemTemplate change dispatch
-            | FileStatus.DeletedFromWorkdir | FileStatus.Nonexistent -> removedChangeItemTemplate change dispatch
+            | FileStatus.DeletedFromWorkdir
+            | FileStatus.Nonexistent -> removedChangeItemTemplate change dispatch
             | FileStatus.Conflicted -> conflictedItemChange change dispatch
             | FileStatus.ModifiedInWorkdir -> modifiedChangeItemTemplate change dispatch
             | _ -> StackPanel.create []
